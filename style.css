@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/*PAGE ACCUEIL*/
+body.page-accueil {
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(image/riviere.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Playfair Display', serif;
+  height: 100vh;
+  overflow: hidden;
+}
+/* ==== header ===== */
+body.page-accueil header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+body.page-accueil .logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+body.page-accueil .logo img {
+  width: 150px;
+  height: auto;
+}
+body.page-accueil nav {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-accueil nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-accueil nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-accueil nav ul li a:hover {
+  background: #FFD700;
+  color: black;
+  border-color: #FFD700;
+}
+/* ===== titre ===== */
+body.page-accueil .titre h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+/* ===== boutons ===== */
+body.page-accueil .bouton {
+  display: flex;
+  gap: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+body.page-accueil .btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background: rgba(255,255,255,0.1);
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-accueil .btn:hover {
+  background: #FFD700;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+/* ===== footer  ===== */
+body.page-accueil footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+/*PAGE D INSCRIPTION */
+body.page-inscription {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+    color: #b8860b;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* header  */
+body.page-inscription header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+body.page-inscription .logo img {
+    width: 190px;
+    height: auto;
+}
+body.page-inscription nav {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-inscription nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-inscription nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-inscription nav ul li a:hover {
+    background-color: #ffd700;
+    color: #000;
+    border-color: #ffd700;
+}
+/*titre*/
+body.page-inscription h1 {
+  font-size: 50px;
+  color: #FFD700;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+  margin-top: -20px;
+}
+body.page-inscription p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(240, 8, 8);
+  color :#000;
+  font-size: 20px;
+}
+/*formulaire */
+body.page-inscription form {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(184,134,11,0.2);
+}
+body.page-inscription td{
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  text-align: left;
+
+}
+body.page-inscription input[type="text"],
+body.page-inscription input[type="email"],
+body.page-inscription input[type="date"],
+body.page-inscription input[type="password"] {
+    width: 150%;
+    padding: 13px 13px;
+    border-radius: 6px;
+    border: 1px solid rgba(250, 205, 4, 0.4);
+    font-size: 60%;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+body.page-inscription input[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 50%;
+    font-weight: 600;
+    color: #000;
+    background-color: #ffd700;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    
+}
+
+
+/*<PAGE DESTINATION  > */
+body.page-destination {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+    color: #b8860b;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* ===== HEADER ===== */
+body.page-destination header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+body.page-destination .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+body.page-destination .logo img {
+    width: 150px;
+    height: auto;
+}
+body.page-destination nav {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-destination nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-destination nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-destination nav ul li a:hover {
+    background: #FFD700;
+    color: black;
+    border-color: #FFD700;
+}
+/* ===== TITRE ===== */
+body.page-destination .titre h1 {
+  font-size: 50px;
+  color: #FFD700;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+  margin-top: 30px;
+}
+body.page-destination .bouton{
+  text-align: center;
+  margin: 25px 0 40px;
+  }
+body.page-destination .btn{
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background: rgba(255,255,255,0.1);
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-destination .choice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+body.page-destination  .choice div {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.page-destination .choice div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+body.page-destination .logo-destination {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFD700;
+  margin-bottom: 15px;
+}
+body.page-destination .choice h4 {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+body.page-destination.choice p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+body.page-destination  .clique {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 2px solid #FFD700;
+  background: rgba(255,255,255,0.1);
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+body.page-destination.clique:hover {
+  background: #FFD700;
+  color: black;
+}
+
+
+/*DESCRIPTION*/
+body.page-description {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+    color: #b8860b;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/*hearder*/
+body.page-description .header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+body.page-description .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+body.page-description .logo img {
+    width: 150px;
+    height: auto;
+}
+body.page-description nav {
+   position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-description nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-description nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-description nav ul li a:hover {
+    background: #FFD700;
+    color: black;
+    border-color: #FFD700;
+}
+/*titre*/
+body.page-description h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+}
+body.page-description p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* main */
+body.page-description main {
+  padding: 40px;
+  background: rgba(26, 26, 26, 0.342);
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  margin-top: 5%;
+}
+body.page-description section {
+  margin-bottom: 50px;
+}
+body.page-description h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+body.page-description p, ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+body.page-description p {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 140%;
+}
+body.page-description ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+/*box img */
+body.page-description .image-row-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+body.page-description .image-row-horizontal a {
+  display: block;
+  width: var(--box-width, 200px);
+  height: var(--box-height, 150px);
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.page-description .image-row-horizontal a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+body.page-description .image-row-horizontal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+/* boutons */
+body.page-description.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background: rgba(255,255,255,0.1);
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-description.btn:hover {
+  background: #FFD700;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+/*PAGE CONTACT*/
+body.page-contact {
+ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+ color: #f5f5f5;
+ min-height: 100vh;
+ line-height: 1.6;
+}
+/* header*/
+body.page-contact header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+body.page-contact .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+body.page-contact .logo img {
+    width: 150px;
+    height: auto;
+}
+body.page-contact nav {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-contact nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-contact nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-contact nav ul li a:hover {
+    background: #FFD700;
+    color: black;
+    border-color: #FFD700;
+}
+/*main */
+body.page-contact main {
+  width: 100%;
+  max-width: var(--maxwidth);
+  padding: 28px 16px;
+  flex: 1 0 auto;
+  display: block;
+}
+body.page-contact main h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+  margin-top: -10px;
+}
+/* contact section */
+body.page-contact .contact-section {
+  display: flex;
+  justify-content: center;       /* centre les box horizontalement */
+  align-items: flex-start;       /* aligne le haut des box */
+  gap: 20px;                     /* espace entre les box */
+  flex-wrap: wrap;               /* permet de repasser à la ligne sur petits écrans */
+}
+
+body.page-contact .contact-box {
+  background:rgba(19, 18, 18, 0.13) ;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  border: 1px solid rgba(12,20,30,0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+  max-width: 500px;
+  text-align: center;
+}
+body.page-contact .contact-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(48, 92, 194, 0.1);
+}
+body.page-contact .contact-box h2 {
+  font-family: 'Playfair Display', serif;
+  color: #FFD700;
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+}
+body.page-contact .contact-box p {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+body.page-contact .contact-box p strong { 
+  color: #0b3946;
+  font-size: 20px;
+}
+body.page-contact .social-links a{
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: var(--fw-medium);
+  border: 1px solid rgba(11,20,25,0.05);
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 4px 12px rgba(12,20,30,0.03);
+  transition: transform .12s ease, background .12s ease;
+  color: #0b3946;
+}
+body.page-contact .social-links a:hover,
+body.page-contact .social-links a:focus {
+  transform: translateY(-4px);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  outline: none;
+}
+body.page-contact .footer {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(3,7,18,0.02), transparent);
+  border-top: 1px solid rgba(10,20,30,0.04);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 90px;
+}
+body.page-contact .footer p { 
+  margin: 0px; 
+  color: white; 
+  font-size: 0.95rem; }
+
+ /* ===== COMPTE À REBOURS ===== */
+    .countdown-container {
+      text-align: center;
+      margin: 20px 0 40px;
+      font-weight: 600;
+      color: #f10c0c;
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+    }
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
