@@ -622,14 +622,97 @@ body.page-contact .footer p {
   font-size: 0.95rem; }
 
  /* ===== COMPTE À REBOURS ===== */
-    .countdown-container {
-      text-align: center;
-      margin: 20px 0 40px;
-      font-weight: 600;
-      color: #f10c0c;
-      font-size: 1.2rem;
-      font-family: 'Playfair Display', serif;
-    }
+.countdown-container {
+  text-align: center;
+  margin: 20px 0 40px;
+  font-weight: 600;
+  color: #f10c0c;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  }
+/*PAGE DE CONFIRMATION  */
+body.page-confirmation  {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+    color: #b8860b;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* header  */
+body.page-confirmation header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+body.page-inscription .logo img {
+    width: 190px;
+    height: auto;
+}
+body.page-inscription nav {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.page-inscription nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+body.page-inscription nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.page-inscription nav ul li a:hover {
+    background-color: #ffd700;
+    color: #000;
+    border-color: #ffd700;
+}
+/*titre*/
+body.page-inscription h1 {
+  font-size: 50px;
+  color: #FFD700;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+  margin-top: -20px;
+}
+body.page-inscription p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(240, 8, 8);
+  color :#000;
+  font-size: 20px;
+}
+
+
+
+
+    .page-confirmation {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.page-confirmation h1 {
+    color: green;
+    font-size: 2.5em;
+}
+
+.page-confirmation a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
