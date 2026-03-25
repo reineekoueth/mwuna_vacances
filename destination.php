@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db   = 'mwuna_vacances';
 $user = 'root';
-$pass = '';
+$pass = '2501';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
@@ -64,27 +64,35 @@ $descriptions = [
 <section class="choice">
   <?php if (!empty($sejours)): ?>
     <?php foreach ($sejours as $sejour): 
-        $key = strtolower($sejour['pays']); 
-        $img = $images[$key] ?? 'image/default.jpg'; 
-        $desc = $descriptions[$key] ?? $sejour['description'] ?? "Description indisponible."; 
+        // Nom de la destination
+        $key = isset($sejour['destination']) ? strtolower($sejour['destination']) : ''; 
+
+        // Image
+        $img = $images[$key] ?? ($sejour['photo'] ?? 'image/default.jpg'); 
+
+        // Description
+        $desc = $descriptions[$key] ?? ($sejour['description'] ?? "Description indisponible."); 
+
+        // Nom affiché
+        $paysAffiche = $sejour['destination'] ?? "Destination inconnue"; 
     ?>
       <div>
         <img 
           src="<?= htmlspecialchars($img) ?>" 
-          alt="Séjour au <?= htmlspecialchars($sejour['pays']) ?>" 
+          alt="Séjour à <?= htmlspecialchars($paysAffiche) ?>" 
           class="logo-destination"
         />
-        <h4><?= strtoupper(htmlspecialchars($sejour['pays'])) ?></h4>
+        <h4><?= strtoupper(htmlspecialchars($paysAffiche)) ?></h4>
         <p><?= htmlspecialchars($desc) ?></p>
         
         <!-- Places disponibles -->
-        <p class="places">👥 Places disponibles : <?= htmlspecialchars($sejour['places_dispo']) ?></p>
+        <p class="places">👥 Places disponibles : <?= htmlspecialchars($sejour['places_dispo'] ?? '?') ?></p>
         
         <!-- Âge recommandé -->
-        <p class="age">🧒 Âge : <?= htmlspecialchars($sejour['age_min']) ?> à <?= htmlspecialchars($sejour['age_max']) ?> ans</p>
+        <p class="age">🧒 Âge : <?= htmlspecialchars($sejour['age_min'] ?? '?') ?> à <?= htmlspecialchars($sejour['age_max'] ?? '?') ?> ans</p>
         
         <!-- Date de départ -->
-        <p class="date">🗓️ Départ : <?= date('d/m/Y', strtotime($sejour['date_depart'])) ?></p>
+        <p class="date">🗓️ Départ : <?= isset($sejour['date_depart']) ? date('d/m/Y', strtotime($sejour['date_depart'])) : "Date inconnue" ?></p>
         
         <a href="inscription.html" class="clique">Choisir la destination</a>
       </div>
@@ -105,7 +113,8 @@ $descriptions = [
 
 <script>
 const countdownElement = document.getElementById("countdown");
-const endDate = new Date("0000-00-00T00:00:00").getTime();
+// Met une vraie date de fin d'inscription ici
+const endDate = new Date("???").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
