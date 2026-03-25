@@ -30,8 +30,6 @@
 <form method="POST" action="traitement.php" name="formulaire">
 
 <table>
-
-    <!-- ===== INFOS TUTEUR ===== -->
      <!-- ===== NOMBRE D'ENFANTS ===== -->
     <tr>
         <td>Nombre d'enfants à inscrire</td>
@@ -59,7 +57,12 @@
     </tr>
     <tr>
         <td>Date de naissance :</td>
-        <td><input type="date" name="enfants[0][date]" required></td>
+        <td><input type="date" 
+            name="enfants[0][date]" 
+            min="2008-01-01" 
+            max="2016-12-31" 
+            required>
+        </td>
     </tr>
 
     <tr>

@@ -632,19 +632,19 @@ body.page-contact .footer p {
   }
 /*PAGE DE CONFIRMATION  */
 body.page-confirmation  {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
-    color: #b8860b;
-    min-height: 100vh;
-    line-height: 1.6;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/riviere.jpg') center/cover no-repeat fixed;
+  color: #b8860b;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 /* header  */
 body.page-confirmation header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
-body.page-inscription .logo img {
+body.page-confirmation .logo img {
     width: 190px;
     height: auto;
 }
