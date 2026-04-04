@@ -21,10 +21,10 @@ $images = [
 
 // Descriptions par défaut
 $descriptions = [
-    'congo'   => "Pointe-Noire, c'est l'endroit où l'océan Atlantique caresse la forêt équatoriale...",
-    'senegal' => "Le Sénégal t'accueille avec ses sourires, sa musique et son soleil éternel...",
-    'angola'  => "L'Angola, c'est l'Afrique brute : plages infinies, savanes dorées, chutes d'eau...",
-    'gabon'   => "Forêts primaires, gorilles, lagons turquoise et parcs nationaux incroyables...",
+    'congo'   => "Pointe-Noire, c'est l'endroit où l'océan Atlantique caresse la forêt équatoriale",
+    'senegal' => "Le Sénégal t'accueille avec ses sourires, sa musique et son soleil éternel",
+    'angola'  => "L'Angola, c'est l'Afrique brute : plages infinies, savanes dorées, chutes d'eau",
+    'gabon'   => "Forêts primaires, gorilles, lagons turquoise et parcs nationaux incroyables",
 ];
 ?>
 <!DOCTYPE html>
@@ -86,13 +86,13 @@ $descriptions = [
         <p><?= htmlspecialchars($desc) ?></p>
         
         <!-- Places disponibles -->
-        <p class="places">👥 Places disponibles : <?= htmlspecialchars($sejour['places_dispo'] ?? '?') ?></p>
+        <p class="places">Places disponibles : <?= htmlspecialchars($sejour['places_dispo'] ?? '?') ?></p>
         
         <!-- Âge recommandé -->
-        <p class="age">🧒 Âge : <?= htmlspecialchars($sejour['age_min'] ?? '?') ?> à <?= htmlspecialchars($sejour['age_max'] ?? '?') ?> ans</p>
+        <p class="age">Âge : <?= htmlspecialchars($sejour['age_min'] ?? '?') ?> à <?= htmlspecialchars($sejour['age_max'] ?? '?') ?> ans</p>
         
         <!-- Date de départ -->
-        <p class="date">🗓️ Départ : <?= isset($sejour['date_depart']) ? date('d/m/Y', strtotime($sejour['date_depart'])) : "Date inconnue" ?></p>
+        <p class="date">Départ : <?= isset($sejour['date_depart']) ? date('d/m/Y', strtotime($sejour['date_depart'])) : "Date inconnue" ?></p>
         
         <a href="inscription.html" class="clique">Choisir la destination</a>
       </div>
