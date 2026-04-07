@@ -23,9 +23,7 @@
     </nav>
 </header>
 
-<h1>Formulaire d'inscription Mwuna 
-    <p>Les inscriptions ne sont pas encore possibles pour l'instant.</p>
-</h1>
+<h1>Formulaire d'inscription Mwuna </h1>
 
 <form method="POST" action="traitement.php" name="formulaire">
 
@@ -43,7 +41,6 @@
             </select>
         </td>
     </tr>
-     <!-- ===== ENFANT 1 (toujours présent) ===== -->
     <tr>
         <td colspan="2"><strong>Enfant </strong></td>
     </tr>
@@ -148,11 +145,10 @@ select.addEventListener("change", () => {
 });
 
 
-// ===== COMPTE À REBOURS =====
 const countdownElement = document.getElementById("countdown");
 
 // ⚠️ Mets une vraie date ici
-const endDate = new Date("2026-06-01T00:00:00").getTime();
+const endDate = new Date("").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
